@@ -1,0 +1,16 @@
+name: Add / update a tool
+description: Suggest a new retriever/reranker or a correction
+labels: ["entry"]
+body:
+  - type: input
+    id: name
+    attributes: { label: Tool name }
+    validations: { required: true }
+  - type: input
+    id: url
+    attributes: { label: Repo / model-card / homepage URL }
+    validations: { required: true }
+  - type: textarea
+    id: details
+    attributes: { label: Org, category, open source?, license, what it does }
+    validations: { required: true }
