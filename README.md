@@ -19,6 +19,15 @@ retriever-dir export --format csv > retrievers.csv
 retriever-dir generate           # regenerate this README
 ```
 
+The [MCP Servers Directory](https://github.com/Amarel-Taylor-Scott/mcp-servers-directory#quick-start) bundles a pinned snapshot of this catalog. Install its CLI once to search the snapshot offline.
+
+```bash
+pipx install git+https://github.com/Amarel-Taylor-Scott/mcp-servers-directory.git
+mcp-dir search rag:tantivy --scope retrievers
+```
+
+This query finds Tantivy. Add `--format json` for the project URL and pinned catalog source. [More search examples](https://github.com/Amarel-Taylor-Scott/mcp-servers-directory/blob/main/resources/search-and-retrieval.md)
+
 ## At a glance
 
 - **17** tools across **5** categories

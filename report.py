@@ -67,6 +67,15 @@ def generate() -> str:
     out.append("retriever-dir generate           # regenerate this README")
     out.append("```\n")
 
+    out.append("The [MCP Servers Directory](https://github.com/Amarel-Taylor-Scott/mcp-servers-directory#quick-start) "
+               "bundles a pinned snapshot of this catalog. Install its CLI once to search the snapshot offline.\n")
+    out.append("```bash")
+    out.append("pipx install git+https://github.com/Amarel-Taylor-Scott/mcp-servers-directory.git")
+    out.append('mcp-dir search rag:tantivy --scope retrievers')
+    out.append("```\n")
+    out.append("This query finds Tantivy. Add `--format json` for the project URL and pinned catalog source. "
+               "[More search examples](https://github.com/Amarel-Taylor-Scott/mcp-servers-directory/blob/main/resources/search-and-retrieval.md)\n")
+
     out.append("## At a glance\n")
     out.append(f"- **{total}** tools across **{len(categories)}** categories")
     out.append(f"- 🟢 **{oss}** open source · 🔒 **{total - oss}** proprietary / hosted\n")
