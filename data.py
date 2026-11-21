@@ -54,6 +54,10 @@ class Tool:
 # ---------------------------------------------------------------------------
 TOOLS: list[Tool] = [
     # --- Sparse / lexical retrieval ---
+    Tool("Tantivy", "Tantivy contributors", Category.sparse_retrieval,
+         "https://github.com/quickwit-oss/tantivy", True, "MIT",
+         note="Rust full-text search library for building inverted indexes and retrieving passages with BM25.",
+         tags=("rust", "inverted-index", "bm25", "lexical")),
     Tool("rank_bm25", "dorianbrown", Category.sparse_retrieval,
          "https://github.com/dorianbrown/rank_bm25", True, "Apache-2.0",
          note="Simple, popular BM25 implementations in Python.",
@@ -68,6 +72,10 @@ TOOLS: list[Tool] = [
          tags=("ir", "lucene", "research")),
 
     # --- Late-interaction retrieval ---
+    Tool("FastPlaid", "LightOn", Category.late_interaction,
+         "https://github.com/lightonai/fast-plaid", True, "MIT",
+         note="Indexes and searches per-token vectors from ColBERT or ColPali for text and page-image retrieval.",
+         tags=("late-interaction", "colbert", "colpali", "multi-vector")),
     Tool("ColBERT", "Stanford FutureData", Category.late_interaction,
          "https://github.com/stanford-futuredata/ColBERT", True, "MIT",
          note="Late-interaction retrieval over token-level embeddings.",
@@ -78,6 +86,10 @@ TOOLS: list[Tool] = [
          tags=("colbert", "training")),
 
     # --- Reranker libraries ---
+    Tool("RankLLM", "Castorini", Category.reranker_lib,
+         "https://github.com/castorini/rank_llm", True, "Apache-2.0",
+         note="Python toolkit for listwise reranking of candidate passages with local models or hosted LLMs.",
+         tags=("listwise", "reranking", "llm", "python")),
     Tool("rerankers", "Answer.AI", Category.reranker_lib,
          "https://github.com/AnswerDotAI/rerankers", True, "Apache-2.0",
          note="One unified API over many reranking methods and models.",
@@ -92,6 +104,10 @@ TOOLS: list[Tool] = [
          tags=("cross-encoder", "popular")),
 
     # --- Reranker models (open weights) ---
+    Tool("Qwen3-Reranker-0.6B", "Qwen", Category.reranker_model,
+         "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B", True, "Apache-2.0",
+         note="Multilingual 0.6B-parameter reranker that scores query-document pairs with task-specific instructions.",
+         tags=("multilingual", "instruction-aware", "open-weights")),
     Tool("FlagEmbedding (bge-reranker)", "BAAI", Category.reranker_model,
          "https://github.com/FlagOpen/FlagEmbedding", True, "MIT",
          note="BGE embeddings & rerankers (bge-reranker) from BAAI.",
